@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pokemon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #container {
+            display: grid;
+
+        }
+
+        body {
+            background-image: url("https://images7.alphacoders.com/592/592678.jpg");
+            /* position: center; */
+            /* background-size: cover; */
+        }
+
+        #main {
+            text-align: center;
+
+        }
+
+        h1 {
+
+            font-family: 'Grandstander', cursive;
+
+            text-rendering: geometricPrecision;
+            background: linear-gradient(to right, #1fddff, #f0cb35, #f11712, #1fddff);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+
+        h1 {
+            /* display: block; */
+            /* margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px; */
+        }
+
+        .card h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 500%;
+            text-rendering: geometricPrecision;
+            background: linear-gradient(to left, #0b486b, #f85032);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+
+        }
+
+        #type {
+            border: 2px solid black;
+        }
+
+        #main button {
+            border: 2px solid black;
+
+        }
+
+        #container img {
+            transition: transform 0.3s;
+        }
+
+        #container img:hover {
+           transform: scale(1.3);
+           background-color:rgb(157, 243, 243);
+           border-radius: 50%;
+           /* padding: 2px;
+           margin-top: 20px; */
+        }
+
+        #container .card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
+
+        #container .card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        #container .card .flip-card-inner .flip-card-back,
+        .flip-card-front {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+        }
+
+        #container .card .flip-card-inner .flip-card-back {
+            transform: rotateY(180deg);
+        }
+        #container .card .flip-card-inner .flip-card-front #img img{
+            margin: auto;
+            /* text-align: center; */
+           
+        }
+
+       
+    </style>
+
+
+</head>
+
+<body>
+
+    <h1 class="text-7xl font-bold bg-opacity-20 opacity-90 ml-0 pl-14">FunPokemon</h1>
+    <div id="main" class="lg:grid-cols-6 md:grid-cols-3 gap-4">
+        <br>
+        <br>
+        <select name="" id="type" class="lg:grid-cols-6 md:grid-cols-3 p-1">
+            <option value="">Type</option>
+            <option value="grass">grass</option>
+            <option value="fire">fire</option>
+            <option value="water">water</option>
+            <option value="bug">bug</option>
+            <option value="normal">normal</option>
+            <option value="poison">poison</option>
+            <option value="electric">electricground</option>
+            <option value="ground">ground</option>
+            <option value="fairy">fairy</option>
+            <option value="fighting">fighting</option>
+            <option value="psychic">psychic</option>
+            <option value="rock">rock</option>
+            <option value="ghost">ghost</option>
+            <option value="ice">ice</option>
+            <option value="dragon">dragon</option>
+        </select>
+        <button value="TypeSearch" id="TypeSearch" class="p-1 bg-orange-500 opacity-85">TypeSearch</button>
+        <input type="text" placeholder="search.." id="search" class="border-2 border-black p-1">
+        <a href="./indxe.html"><button id="#" value="reset"
+                class="p-1 w-20 bg-green-400 opacity-55 text-1xl">Reset</button></a>
+    </div>
+    <br>
+    <div id="container" class="max-W-[100%] mx-auto lg:grid-cols-6 md:grid-cols-3 gap-4 px-[50px] rounded-lg">
+        <!-- <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div id="img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpMHRgGhGu9aTtu0Te1mcG91JjK6v24lHbbw&usqp=CAU"
+                            alt="" height="200px" width="200px">
+                    </div>
+                    <h3 class="text-3xl font-bold underline">ajay</h3>
+                </div>
+                <div class="flip-card-back">
+                    <div id="img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpMHRgGhGu9aTtu0Te1mcG91JjK6v24lHbbw&usqp=CAU"
+                            alt="" height="200px" width="200px">
+                    </div>
+                    <h3 class="text-3xl font-bold underline">arun</h3>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div id="img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpMHRgGhGu9aTtu0Te1mcG91JjK6v24lHbbw&usqp=CAU"
+                            alt="" height="200px" width="200px">
+                    </div>
+                    <h3 class="text-3xl font-bold underline">ajay</h3>
+                </div>
+                <div class="flip-card-back">
+                    <div id="img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpMHRgGhGu9aTtu0Te1mcG91JjK6v24lHbbw&usqp=CAU"
+                            alt="" height="200px" width="200px">
+                    </div>
+                    <h3 class="text-3xl font-bold underline">arun</h3>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <br>
+    <br>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
